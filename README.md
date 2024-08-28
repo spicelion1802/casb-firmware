@@ -31,11 +31,11 @@ ls -l filename.bin
 ```bash
 ./filename.bin
 ```
-- If the installer fails, try first installing the following libraries
+- If the installer fails, try installing the following libraries
 ```bash
 sudo apt install libtinfo6 libtinfo5 libtinfo-dev
 ```
-- If the installer still fails, try instead downloading the `tar.gz` 2023.2 all OS single-file download
+- If the installer still fails, try downloading the `tar.gz` 2023.2 all OS single-file download
 
 # Setting up Vivado
 
