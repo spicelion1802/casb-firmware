@@ -19,12 +19,23 @@ How to set up the OS, firmware, and software on the Z-turn used by the CASB
 # Installing Vivado
 - Download the binary executable `.bin` 2023.2 Linux Self Extraxting Web Installer file
   - https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html
-    
-
-Extract the files while mainting the internal archive structure 
+- Make the binary file an executable
 ```bash
-sudo tar -xzvf Xilinx_Unified_2020.1_0602_1208.tar.gz -C /opt/
+chmod +x filename.bin
 ```
+- Verify it is now an exectuable by checking for an x in the permissions
+```bash
+ls -l filename.bin
+```
+- Run the executable
+```bash
+./filename.bin
+```
+- If the installer fails, try first installing the following libraries
+```bash
+sudo apt install libtinfo6 libtinfo5 libtinfo-dev
+```
+- If the installer still fails, try instead downloading the `tar.gz` 2023.2 all OS single-file download
 
 # Setting up Vivado
 
