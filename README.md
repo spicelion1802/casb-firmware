@@ -36,6 +36,26 @@ ls -l filename.bin
 sudo apt install libtinfo6 libtinfo5 libtinfo-dev
 ```
 - If the installer still fails, try downloading the `tar.gz` 2023.2 all OS single-file download
+- AMD recommends the use of 7-zip to decompress the downloaded tar.gz file
+```bash
+sudo apt install p7zip-full
+```
+- Use 7-zip to extract the .tar file from the .tar.gz file
+```bash
+7z x filename.tar.gz
+```
+- Use tar to extract the contents of the .tar file
+```bash
+tar -xvf filename.tar
+```
+- Install any missing dependent libraries required by Vivado
+```bash
+ sudo /FPGAs_AdaptiveSoCs_Unified_2023.2_*/installLibs.sh
+```
+- Run xsetup to launch the installation
+```bash
+sudo ./FPGAs_AdaptiveSoCs_Unified_2023.2*/xsetup
+```
 
 # Setting up Vivado
 
