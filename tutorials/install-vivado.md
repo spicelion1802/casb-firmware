@@ -12,6 +12,30 @@ chmod +x filename.bin
 ```bash
 ls -l filename.bin
 ```
+- Install these dependencies
+```bash
+sudo apt install libncurses5
+sudo apt install libtinfo5
+sudo apt install libncurses5-dev
+sudo apt install libncursesw5-dev
+sudo apt-get install libtinfo-dev
+sudo apt-get install libncurses-dev
+sudo apt-get install gitk
+sudo apt-get install libdpkg-perl
+sudo apt-get install git-gui
+sudo apt-get install libstdc++6
+sudo apt-get install libusb-dev
+sudo apt-get install libgtk2.0-0
+sudo apt-get install libc6-dev-i386
+sudo apt-get install dpkg-dev
+sudo apt-get install libegl-mesa0
+sudo apt-get install libegl1-mesa
+sudo apt-get install libgbm1
+sudo apt-get install python3-apport
+sudo apt-get install fxload
+sudo apt-get install build-essential
+sudo apt update
+```
 - Run the executable
 ```bash
 ./filename.bin
