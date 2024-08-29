@@ -1,11 +1,13 @@
 # Connecting to the Z-turn
 - IPv4: `128.91.42.95`
-- User:
-    - zturn login: `casbuser`
-    - password: `casbdontfailmenow`
-- Root:
-    - zturn login: `root`
-    - Password: `root`
+- Z-turn login: `casbuser`
+- Password: `casbdontfailmenow`
+
+### Using SSH
+```bash
+ssh casbuser@<ip-address>
+```
+
 ### Using USB
 - Connect `USB_UART` port on Z-turn to computer
 - Find the serial port and look for somthing like `/dev/tty.usbserial-xxxx`
@@ -24,7 +26,5 @@ Then get the id numebr and kill it
 ```bash
 screen -X -S <id> quit
 ```
-### Using SSH
-```bash
-ssh root@<ip-address>
-```
+
+
