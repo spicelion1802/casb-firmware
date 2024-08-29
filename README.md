@@ -17,17 +17,15 @@ How to set up the OS, firmware, and software on the Z-turn used by the CASB
   - Written in Python3.?. Listens for a configuration file from the Data Aquisition System (DAQ), parses it, and sets thresholds and masks on the board accordingly. Digital to Analog Converter (DAC) output threshold voltages and Analog to Digical Converter (ADC) input voltages are communicated using I2C. Masks are switched on and off using GPIO. Writes firmware level configurables like reshape length to memory registers.
 
 # My Setup
-- Computer: Lenovo ThinkPad P14s Gen 2
-- OS: Ubuntu 22.04
+- Computer: `Lenovo ThinkPad P14s Gen 2`
+- OS: `Ubuntu 22.04`
 
 # Installing Vivado
-- Download the binary executable `.bin` 2023.2 Linux Self Extraxting Web Installer file
-  - https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html
-- Make the binary file an executable
+- Download the binary executable `.bin` 2023.2 Linux Self Extraxting Web Installer file from https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html and make it an executable
 ```bash
 chmod +x filename.bin
 ```
-- Verify it is now an exectuable by checking for an x in the permissions
+- Verify it is now an exectuable by checking for `-rwxr-xr-x` in the permissions
 ```bash
 ls -l filename.bin
 ```
@@ -35,13 +33,25 @@ ls -l filename.bin
 ```bash
 ./filename.bin
 ```
+- Istall the Vivado ML Enterprise edition in `/opt/Xilinx`. To grant read and write permissions of `/opt` to everyone run
+```bash
+sudo chmod 777 /opt
+```
 
 # If the Installer Fails
-- Try installing the following libraries
+- Try installing the following libraries and run the executable again
 ```bash
 sudo apt install libtinfo6 libtinfo5 libtinfo-dev
 ```
-- If the installer still fails, try downloading the `tar.gz` 2023.2 all OS single-file download
+- If the installer still fails, verify that your display is exporting correctlyseeing if there is something wrong with your computer. If you ran
+```bash
+sudo apt update
+```
+at any time, your upgraded OS may not be compatible. Try seeing if xclock still works
+```bash
+xclock
+```
+- If the installer still fails, verify the display is  OS, or fixing  try downloading the `tar.gz` 2023.2 all OS single-file download
 - AMD recommends the use of 7-zip to decompress the downloaded tar.gz file
 ```bash
 sudo apt install p7zip-full
