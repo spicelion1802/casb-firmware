@@ -35,7 +35,9 @@ ls -l filename.bin
 ```bash
 ./filename.bin
 ```
-- If the installer fails, try installing the following libraries
+
+# If the Installer Fails
+- Try installing the following libraries
 ```bash
 sudo apt install libtinfo6 libtinfo5 libtinfo-dev
 ```
