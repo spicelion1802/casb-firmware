@@ -43,15 +43,15 @@ sudo chmod 777 /opt
 ```bash
 sudo apt install libtinfo6 libtinfo5 libtinfo-dev
 ```
-- If the installer still fails, verify that your display is exporting correctlyseeing if there is something wrong with your computer. If you ran
-```bash
-sudo apt update
-```
-at any time, your upgraded OS may not be compatible. Try seeing if xclock still works
+- If the installer still fails, verify that the display is exporting correctly by running xclock
 ```bash
 xclock
 ```
-- If the installer still fails, verify the display is  OS, or fixing  try downloading the `tar.gz` 2023.2 all OS single-file download
+- If xclock works, maybe the OS is not compatable because it was upgraded with
+```bash
+sudo apt update
+```
+- If the OS has not been accidentaly upgraded, try downloading the `tar.gz` 2023.2 all OS single-file download
 - AMD recommends the use of 7-zip to decompress the downloaded tar.gz file
 ```bash
 sudo apt install p7zip-full
