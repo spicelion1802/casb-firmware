@@ -1,6 +1,7 @@
 #### My Setup
 - Computer: `Lenovo ThinkPad P14s Gen 2`
 - OS: `Ubuntu 22.04`
+- Vivado: `2023.2`
 
 # Installing Vivado
 - Download the binary executable `.bin` 2023.2 Linux Self Extraxting Web Installer file from https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html and make it an executable
@@ -48,3 +49,9 @@ tar -xvf filename.tar
 ```
 - Install any missing dependent libraries required by Vivado
 ```bash
+ sudo /FPGAs_AdaptiveSoCs_Unified_2023.2_*/installLibs.sh
+```
+- Run xsetup to launch the installation
+```bash
+sudo ./FPGAs_AdaptiveSoCs_Unified_2023.2*/xsetup
+```
