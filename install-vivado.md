@@ -1,4 +1,4 @@
-### My Setup
+#### My Setup
 - Computer: `Lenovo ThinkPad P14s Gen 2`
 - OS: `Ubuntu 22.04`
 
