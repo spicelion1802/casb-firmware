@@ -1,5 +1,4 @@
 # Central Analog Summing Board (CASB)
-How to set up the OS, firmware, and software on the Z-turn used by the CASB
 
 - Z-turn: `MYS-7Z020-V2`
   - https://www.myirtech.com/download/Zynq7000/Z-turnBoardV2.pdf 
@@ -14,5 +13,5 @@ How to set up the OS, firmware, and software on the Z-turn used by the CASB
   - Written in VHDL. Uses the comparator outputs, delayed global trigger, lockout, and spare inputs to determine whether there should be a trigger. Reads configurables like reshape length from memroy registers. When possible use the latest version of last year's Vivado. Never use the most recent Vivado release.
 
 - Software:
-  - Written in Python3.?. Listens for a configuration file from the Data Aquisition System (DAQ), parses it, and sets thresholds and masks on the board accordingly. Digital to Analog Converter (DAC) output threshold voltages and Analog to Digical Converter (ADC) input voltages are communicated using I2C. Masks are switched on and off using GPIO. Writes firmware level configurables like reshape length to memory registers.
+  - Written in Python3 and C++. Listens for a configuration file from the Data Aquisition System (DAQ), parses it, and sets thresholds and masks on the board accordingly. Digital to Analog Converter (DAC) output threshold voltages and Analog to Digical Converter (ADC) input voltages are communicated using I2C. Masks are switched on and off using GPIO. Writes firmware level configurables like reshape length to memory registers.
 
