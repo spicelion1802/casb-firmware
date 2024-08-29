@@ -16,6 +16,10 @@ How to set up the OS, firmware, and software on the Z-turn used by the CASB
 - Software:
   - Written in Python3.?. Listens for a configuration file from the Data Aquisition System (DAQ), parses it, and sets thresholds and masks on the board accordingly. Digital to Analog Converter (DAC) output threshold voltages and Analog to Digical Converter (ADC) input voltages are communicated using I2C. Masks are switched on and off using GPIO. Writes firmware level configurables like reshape length to memory registers.
 
+# My Setup
+- Computer: Lenovo ThinkPad P14s Gen 2
+- OS: Ubuntu 22.04
+
 # Installing Vivado
 - Download the binary executable `.bin` 2023.2 Linux Self Extraxting Web Installer file
   - https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html
