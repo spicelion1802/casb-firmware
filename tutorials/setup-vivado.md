@@ -1,7 +1,5 @@
 # How to setup Vivado
 
-Congratulations on making it this far, but don't celebrate quite yet because there is still a perilous road ahead.
-
 ### My Setup
 - Computer: `Lenovo ThinkPad P14s Gen 2`
 - OS: `Ubuntu 22.04 LTS`
@@ -18,4 +16,19 @@ export XILINXD_LICENSE_FILE=1700@localhost
 export LM_LICENSE_FILE=2700@localhost
 ```
 
+### Creating a new project
+- Open Vivado
+```bash
+vivado_2023
+vivado
+```
+- Create Project
+- RTL Project
+- Change Target Lanugage to `VHDL`
+- Skip Add Sources
+- Skip Add Constraints
+- Choose part `xc7z020clg400-1`
 
+
+### Hello World Tutorial
+- https://www.myirtech.com/download/Zynq7000/A_Hello_World_tutorial_for_Z-turn_Board.pdf
