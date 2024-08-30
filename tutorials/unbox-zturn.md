@@ -1,7 +1,7 @@
 # Initial setup of Z-turn connection
 
 ### My Setup
-- Z-turn model: `MYS-7Z010/20-V2`
+- Board: `MYS-7Z010/20-V2`
 - Computer: `MacBook Air`
 - OS: `macOS Sonoma 14.6.1`
 
