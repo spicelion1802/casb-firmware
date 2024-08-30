@@ -8,5 +8,14 @@ Congratulations on making it this far, but don't celebrate quite yet because the
 - Vivado: `2023.2`
 
 ### Instructions
+- Add this alias command to your `.bashrc` and call it every time before opening vivado.
+```bash
+alias vivado_2023="source /opt/Xilinx/Vivado/2023.2/settings64.sh"
+```
+- Enable full functionality by exporting Penn's Vivado license file
+```bash
+export XILINXD_LICENSE_FILE=1700@localhost
+export LM_LICENSE_FILE=2700@localhost
+```
 
 
