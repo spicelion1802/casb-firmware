@@ -46,9 +46,30 @@ vivado
 - `Run Synthesis` (convert VHDL into netlist of logic gates)
 - `Implement` (prepare netlist of logic gates for loading onto FPGA)
 - `Generate Bitstream` (create binary file that configures FPGA)
-- `File` --> `Export` --> `Export Hardware` --> `Include bitstream` and export to project directory 
-- `Tools` --> `Launch Vitis IDE` 
+- `File` --> `Export` --> `Export Hardware` --> `Include bitstream` and export `casb_wrapper.xsa` to project directory 
 
+### Start the software application in Vitis
+- `Tools` --> `Launch Vitis IDE` 
+- Make the Vitis workspace the same as Vivado
+
+### Vitis Platform vs. Appllication 
+- A `platform` in Vitis is the hardware abstraction layer on which your application runs. It defines the hardware environment and the software drivers necessary to interact with that hardware.
+- An `application` in Vitis refers to the software that runs on the platform. It is the end-user code that you develop to achieve a specific function, like image processing, machine learning inference, or signal processing.
+
+### Creating a platform component from HDL wrapper 
+- `File` --> `New Component` --> `Platform`
+- Name it something like `casb_platforum` and make the location the working directory
+- `Browse` --> `casb_wrapper.xsa`
+- Set operating system to `standalone`, processor to `ps7_cortexa9_0`, and enable `Generate Boot artifacts`
+
+
+### Creating an application project from the platform
+- Name the component `casb_component` and make the location the Vivado working directory
+- Choose the `casb_platform` just created as the platform
+- Choose the `standalone_ps7_cortexa9_0` domain
+
+### Create the main C source code that controls the AXI GPIO peripherals
+- `casb_component` --> `Sources` --> right click on `src` --> `New File` and name it `main.c`
 
 ### Hello World Tutorial
 - https://www.myirtech.com/download/Zynq7000/A_Hello_World_tutorial_for_Z-turn_Board.pdf
