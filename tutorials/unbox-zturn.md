@@ -1,8 +1,8 @@
-#### My Setup
+# Initial setup of Z-turn connection
+
+### My Setup
 - Z-turn model: `MYS-7Z010/20-V2`
 - Computer: `MacBook Air` running `Sonoma 14.6.1`
-
-# Initial setup of Z-turn connection
 
 ### Checking pre-installed Linux version
 - If Linux is installed and boots successfully, there will be a login prompt when connecting to the Z-turn. Can check the kernel version and type of system with
