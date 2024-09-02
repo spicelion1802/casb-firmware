@@ -62,6 +62,36 @@ vivado
 - `Browse` --> `casb_wrapper.xsa`
 - Set operating system to `standalone`, processor to `ps7_cortexa9_0`, and enable `Generate Boot artifacts`
 
+### Creating an application project from the platform using a template
+- `Examples` --> `Hello World` --> `Create Application Component from Template`
+- Name it `hello_world` and make the location the Vivado working directory
+- Select `casb_platform` as the platform
+- Select `standalone_ps7_cortexa9_0` as the domain
+- Use this code for `hello_world.c` instead:
+```c
+#include <stdio.h>
+#include "platform.h"
+int main()
+{
+    init_platform();
+    printf("Hello World\n\r");
+    printf("Successfully ran Hello World application");
+    cleanup_platform();
+    return 0;
+}
+```
+
+### Build and run the application
+- `Flow` -->`Build`
+- Power the Z-turn by connecting USB cable to `USB_UART (the blue LED should be on)
+- Connect the 
+- `Flow` --> `Run`
+
+### Hello World Tutorial
+- https://www.myirtech.com/download/Zynq7000/A_Hello_World_tutorial_for_Z-turn_Board.pdf
+
+
+# Bonus
 
 ### Creating an application project from the platform
 - `File` --> `New Component` --> `Application`
@@ -179,6 +209,3 @@ int main() {
 ```
 The `xparameters.h` file now only defines base addresses rather than device IDs. This removes the uncessary itermediate step of translating a device ID to a base address. Instead of looking up GPIO configurations with a device ID, you use the GPIO's base address in functions like `XGpio_LookupConfig`
 
-
-### Hello World Tutorial
-- https://www.myirtech.com/download/Zynq7000/A_Hello_World_tutorial_for_Z-turn_Board.pdf
