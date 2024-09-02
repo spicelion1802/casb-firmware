@@ -84,8 +84,23 @@ int main()
 ### Build and run the application
 - `Flow` -->`Build`
 - Power the Z-turn by connecting USB cable to `USB_UART (the blue LED should be on)
-- Connect the 
+- Connect JTAG cable to J1 on the ZTURN
+- Jump P1 but not P2 to turn on boot via JTAG mode
+```txt
+pin 2 = VREF
+pin 4 = TMS
+pin 6 = TCK
+pin 8 = TDO
+pin 10 = TDI
+pin 1/3/5/7/9/11 = GND
+```
+- Board initialization set to `TCL`
+- Disable `Reset APU`
+- Disable `Enable Cross Triggering`
+- In terminal run
+`screen /dev/ttyUSB0 115200`
 - `Flow` --> `Run`
+- Should see output via screen
 
 ### Hello World Tutorial
 - https://www.myirtech.com/download/Zynq7000/A_Hello_World_tutorial_for_Z-turn_Board.pdf
