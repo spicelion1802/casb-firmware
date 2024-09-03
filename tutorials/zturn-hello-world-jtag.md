@@ -4,7 +4,7 @@
 ### My Setup
 - Board: `MYS-7Z020-V2`
 - Vivado: `2023.2`
-- OS: `Ubuntu 22.04 LTS`
+- OS: `Ubuntu 22.04.04 LTS`
 
 ### Instructions
 - Open Vivado

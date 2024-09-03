@@ -3,7 +3,7 @@ Installing Vivado is like assembling a 10,000-piece jigsaw puzzle... in the dark
 
 ### My Setup
 - Computer: `Lenovo ThinkPad P14s Gen 2`
-- OS: `Ubuntu 22.04 LTS`
+- OS: `Ubuntu 22.04.04 LTS`
 - Vivado: `2023.2`
 
 ### Instructions
