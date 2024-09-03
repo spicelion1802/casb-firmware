@@ -117,3 +117,7 @@ int main() {
 ```
 The `xparameters.h` file now only defines base addresses rather than device IDs. This removes the uncessary itermediate step of translating a device ID to a base address. Instead of looking up GPIO configurations with a device ID, you use the GPIO's base address in functions like `XGpio_LookupConfig`
 
+
+### Hello World Tutorial
+- https://www.myirtech.com/download/Zynq7000/A_Hello_World_tutorial_for_Z-turn_Board.pdf
+
