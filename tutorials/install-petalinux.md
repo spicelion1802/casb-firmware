@@ -24,13 +24,10 @@ sudo apt install autoconf
 sudo apt install libtool
 sudo apt install texinfo
 sudo apt install zlib1g-dev
+sudo apt install tftpd-hpa
 ```
-- Run the installer executable
+- Run the installer executable and specify the working directory
 ```bash 
 ./installer.run --dir /opt/PetaLinux/
-```
-- Install TFTP for booting devices over the network
-```bash 
-sudo apt-get install tftpd-hpa
 ```
 
