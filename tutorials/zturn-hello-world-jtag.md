@@ -103,6 +103,3 @@ pin 1/3/5/7/9/11 = GND
 - `Flow` --> `Run`
 - Should see output via screen
 
-### Hello World Tutorial
-- https://www.myirtech.com/download/Zynq7000/A_Hello_World_tutorial_for_Z-turn_Board.pdf
-
