@@ -99,7 +99,7 @@ pin 1/3/5/7/9/11 = GND
 - Disable `Reset APU`
 - Disable `Enable Cross Triggering`
 - In terminal run
-`screen /dev/ttyUSB0 115200`
+`sudo screen /dev/ttyUSB0 115200`
 - `Flow` --> `Run`
 - Should see output via screen
 
