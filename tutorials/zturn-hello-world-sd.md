@@ -20,14 +20,26 @@ sudo gparted
   - File System: `ext4`
   - Size: Remainder of the disk
 - If you did this correclty, there will be no unallocated space remaining
-- If there is a red exlamaton mark next to one of the partitions, right click then choose check
-- If error is `repair file system (fat32) on /dev/sda1`, fix the error through terminal
+- Click the green check mark to apply the changes
+- There may be a red exclamation mark next to the BOOT partition. That should be fixed from mounting it
+
+### Create temporary mounting points on local machine for SD card partitions
+- Assuming that:
+  - `/dev/sda1` is `BOOT` partition
+  - `/dev/sda2` is `ROOT` partition
 ```bash
 sudo umount /dev/sda1
 sudo fsck.vfat -a /dev/sda1
-sudo mount /dev/sda1 /mnt
+sudo mkdir /mnt/sd_boot
+sudo mount /dev/sda1 /mnt/sd_boot
 ```
-- Reopen gparted and check that the flag disapeared
+```bash
+sudo umount /dev/sda2
+sudo fsck.vfat -a /dev/sda2
+sudo mkdir /mnt/sd_root
+sudo mount /dev/sda2 /mnt/sd_root
+```
+- Reopen gparted and check that the flag disapeared.
 
 ### Filling the partition
 - Copy `BOOT.bin`, `image.ub`, and `boot.scr` from `casb.linux/images/linux/` to the `BOOT` partition
