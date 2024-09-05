@@ -43,3 +43,20 @@ sudo mount /dev/sda2 /mnt/sd_root
 
 ### Filling the partition
 - Copy `BOOT.bin`, `image.ub`, and `boot.scr` from `casb.linux/images/linux/` to the `BOOT` partition
+```bash
+sudo cp casb.linux/images/linux/BOOT.bin /mnt/sd_boot
+sudo cp casb.linux/images/linux/image.ub /mnt/sd_boot
+sudo cp casb.linux/images/linlux/boot.scr /mnt/sd_boot
+```
+- Copy `rootfs.tar.gz` from `casb.linux.images/linux` to the `ROOT` partition
+```bash
+sudo cp casb.linux/images/linux/rootfs.tar.gz /mnt/sd_root
+```
+- Unzip the file uzing `gzip` and `tar`
+```bash
+sudo apt install gzip
+sudo tar -xvzf rootfs.tar.gz
+```
+
+
+
