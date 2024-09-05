@@ -58,5 +58,28 @@ sudo apt install gzip
 sudo tar -xvzf rootfs.tar.gz
 ```
 
+### Remoivng SD card from local machine
+- Remove temporary mounting points
+```bash
+sudo umount /mnt/sd_boot
+sudo umount /mnt/sd_root
+```
+- Eject the sd card
+```bash
+sudo eject /dev/sda
+```
+
+### Booting
+- Set the Zturn to the correct boot mode
+  - JP1=ON  + JP2=ON  --> QSPI  
+  - JP1=ON  + JP2=OFF --> JTAG
+  - JP1=OFF + JP2=ON  --> SD Card
+  - JP1=OFF + JP2=OFF --> NAND Flash
+- Put the SD card into the Z-turn
+- Power the Z-turn by connecting `USB_UART` mini usb to computer usb
+- Open screen to that port
+```bash
+sudo screen /dev/ttyUSB0 115200
+```
 
 
