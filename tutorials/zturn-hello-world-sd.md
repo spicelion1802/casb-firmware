@@ -21,7 +21,11 @@ sudo gparted
   - Size: Remainder of the disk
 - If you did this correclty, there will be no unallocated space remaining
 - Click the green check mark to apply the changes
-- There may be a red exclamation mark next to the BOOT partition. That should be fixed from mounting it
+- If there is a red exclamation mark next to a partition, right click on it and select information. You may need to install some software packages
+```bash
+sudo apt install dosfstools
+sudo apt install mtools
+```
 
 ### Create temporary mounting points on local machine for SD card partitions
 - Assuming that:
