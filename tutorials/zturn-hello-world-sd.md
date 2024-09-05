@@ -14,9 +14,9 @@ sudo gparted
 - Right click on the unallocated space and select new
   - Partition name: `BOOT`
   - File System: `fat32`
-  - Size: 256MB=245MiB
+  - Size: 256MiB (12.78 used)
 - Add and repeat
-  - Patition name: `ROOT`
+  - Patition name: `ROOT` (29.47 GiB)
   - File System: `ext4`
   - Size: Remainder of the disk
 - If you did this correclty, there will be no unallocated space remaining
