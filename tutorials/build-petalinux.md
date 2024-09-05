@@ -27,9 +27,27 @@ petalinux-config -p casb.linux/ -c rootfs
 - Check that `project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi` is empty. If custom device drivers are desired, or if a property of an existing hardwaer device (e.g the SD card controller) needs to be modified, this file can be modified.
 - From Adrian's project copy `petalinux/recipes/regtest/` to `casb.linux/project-spec/meta-user/recipes-apps/` to add a simple user application to the build. This is donw by creating an app template as in the https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18842475/PetaLinux+Yocto+Tips#PetaLinuxYoctoTips-CreatingApps(whichuseslibraries)inPetaLinuxProject. 
 - From Adrian's project copy `/petalinux/confix/user-rootfsconfig` to `project-spec/meta-user/conf/` to ensure that user application are included in the root file system.
-- Build the project. This will take an hour the first time.
+- Build the project. This will take multiple hours the first time.
 ```bash
-petalinux-build -p casb.linux
+petalinux-build -p casb.linux -c petalinux-image-full
 ```
+- Don't worry if you get `INFO: Failed to copy built images to tftp dir: /tftpboot`
+- I found that the build images were located `casb.linux/build/images/linux` instead of `casb.linux/images/linux`, so copy them to the correct location
+```bash
+cp -r `casb.linux/build/images casb.linux/images
+```
+- Package the image to create the output file `casb.linux/images/linux/BOOT.bin`
+```bash
+petalinux-package -p casb.linux/ --boot --u-boot --fsbl casb.linux/images/linux/zynq_fsbl.elf --fpga casb.linux/images/linux/system.bit -o casb.linux/images/linux/BOOT.bin
+```
+- If `system.bit` cannot be found...
+```bash
+cp casb_firmware/casb_tester.bit casb_firmware/casb.linux/build/images/linux/system.bit
+```
+- Test the build from the `casb.linux` directory 
+```bash
+petalinux-boot --qemu --u-boot
+``` 
+
 
 
