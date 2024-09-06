@@ -6,9 +6,6 @@
 - Vivado: `2023.2`
 - OS: `Ubuntu 22.04.04 LTS`
 
-### Install board file
-- Go to MYIR's official website to download the latest board definition files for MYS-7Z020.
-
 ### Instructions
 - Open Vivado
 ```bash
@@ -21,8 +18,7 @@ vivado
 - Skip Add Sources
 - Skip Add Constraints
 - Choose part `xc7z020clg400-1`
-
-
+- Choose board `mys-7z020:part0:2.1`
 
 ### Create and configure the processor system
 - When Vivado opens, in the flow navigator pane (left) click on `create block design`
