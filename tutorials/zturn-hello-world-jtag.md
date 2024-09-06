@@ -25,7 +25,7 @@ vivado
 - An empty diagram opens, click `+` to add an IP called `ZYNQ7 Processing System` and then double click on the block to configure it
 - `PS-PL` --> `General` --> `UART1 Baud Rate` should be 115200
 - `PS-PL` --> `General` --> `Enable Clock Resets` --> `FCLK_RESET0_N` should be disabled
-- `PS-PL` --> `General` --> `AXI Non Secure Enablement` --> `GP Master AXI Interface` --> `M AXI GP0 interface` should be disabled
+- `PS-PL` --> `AXI Non Secure Enablement` --> `GP Master AXI Interface` --> `M AXI GP0 interface` should be disabled
 - Under `Peripheral I/O Pins` only `UART 1` should be enabled. Do this by clicking on the `UART 1` button **under column 48-49**
 - Under `Peripheral I/O Pins` set `Bank 0` to 3.3V and `Bank 1` to 1.8V
 - Under `MIO Configuration` --> `I/O Peripherals` make sure everything is diabled expcept `UART 1` and the Bank voltages are correct.
