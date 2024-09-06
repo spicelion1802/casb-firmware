@@ -1,5 +1,11 @@
-
 # Bonus
+
+### Adrian help stuck on sd card
+- The board file specifies how to configure the zynq processor: certain features like clock, sd, eth, usb are designed to be output in a specific location in a specific way for a certain board.
+- Previously had ddr disabled, which meant no memory location to boot from?
+- Previously had no board file
+- Did not add boot flag to partition
+
 
 ### Creating an application project from the platform
 - `File` --> `New Component` --> `Application`
