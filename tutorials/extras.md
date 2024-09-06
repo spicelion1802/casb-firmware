@@ -5,6 +5,7 @@
 - Previously had ddr disabled, which meant no memory location to boot from?
 - Previously had no board file
 - Did not add boot flag to partition
+- Automate as much of the processor/reset stuff as possible
 
 
 ### Creating an application project from the platform
