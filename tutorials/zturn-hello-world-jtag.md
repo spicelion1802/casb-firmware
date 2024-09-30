@@ -20,6 +20,7 @@ vivado
 - Choose part `xc7z020clg400-1`
 - Choose board `mys-7z020:part0:2.1`
     - https://github.com/q3k/zturn-stuff/tree/master
+    - copy 'board_files` to `/opt/Xilinix/Vivado/2023.2/data/boards/`
 
 ### Create and configure the processor system
 - When Vivado opens, in the flow navigator pane (left) click on `create block design`
