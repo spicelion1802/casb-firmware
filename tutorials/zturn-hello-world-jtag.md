@@ -21,6 +21,10 @@ vivado
 - Choose board `mys-7z020:part0:2.1`
     - https://github.com/q3k/zturn-stuff/tree/master
     - copy 'board_files` to `/opt/Xilinix/Vivado/2023.2/data/boards/`
+ 
+### Correct Processor Configuration
+- To configure the I2C SDA and SCL lines on your custom PL I/O pins (IO_L4P_T0_35 for SDA and IO_L4N_T0_35 for SCL), you'll need to disable the default MIO I2C configuration in the Zynq Processing System (PS) and route the I2C signals through the EMIO interface
+- Disable `TTC0`
 
 ### Create and configure the processor system
 - When Vivado opens, in the flow navigator pane (left) click on `create block design`
