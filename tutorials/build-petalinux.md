@@ -10,9 +10,9 @@ vivado
 - `Program and Debug` --> `Generate Bitstream`
 - `File` --> `Export` --> `Export Bitstream File` and name it `casb_tester.bit`
 - `File` --> `Export` --> `Export Hardware` --> `Include Bitstream`
-- From the `firmware/` directory create the PetaLinux project
+- From the `casb/` directory create the PetaLinux project
 ```bash
-petalinux-create -t project -n qpix.linux --template zynq
+petalinux-create -t project -n casb.linux --template zynq
 ```
 - From Adrian's project copy `/petalinux/configs/config` and `/petalinux/configs/rootfs_config` to `casb.linux/project-spec/configs/`
 - Grab the exported `.xsa` and `.bit` files
