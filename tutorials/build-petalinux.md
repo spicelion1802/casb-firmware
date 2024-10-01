@@ -21,6 +21,15 @@ petalinux-create -t project -n casb.linux --template zynq
 petalinux-config -p casb.linux/ --get-hw-description casb_tester/
 ```
 - In the graphical menu that pops up, confirm **Image Packaging Configuration - Root filesystem type - EXT4** has been properly selected from the configuration files (this ensures the image will boot from an ext4 partition on the SD card).
+- Add libaries that allow you to get `i2c-tools` and `smbus`
+```bash
+git clone https://git.openembedded.org/meta-openembedded /opt/Xilinx/casb/casb.linux/meta-openembedded
+petalinux-config
+```
+```sql
+Yocto Settings → User Layers
+```
+- When prompted add `/opt/Xilinx/casb/casb.linux/meta-openembedded/meta-oe` :and `/opt/Xilinx/casb/casb.linux/meta-openembedded/meta-python`
 ```bash
 petalinux-config -p casb.linux/ -c rootfs
 ```
