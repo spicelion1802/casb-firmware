@@ -26,3 +26,12 @@ sudo eject /dev/sda
   - No Xilinx i2c support in kernel
   - Xinit errors
 
+### v2
+- Vivado block diagram additions:
+    - Interrupts input to ZYNQ7 Processing System
+    - IIC Interrupt Controller
+    - AXI IIC (single not bus)
+    - AXI Interconnect
+    - Constraints on i2c0 output port
+- Kernel additions:
+  - Xilinx i2c Controller ('Device Drivers' --> 'i2c support' --> 'i2c hardware bus support')
