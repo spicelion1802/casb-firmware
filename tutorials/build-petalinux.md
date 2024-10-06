@@ -45,6 +45,10 @@ petalinux-package -p casb.linux/ --boot --u-boot --fsbl casb.linux/images/linux/
 ```bash
 cp casb_firmware/casb_tester.bit casb_firmware/casb.linux/build/images/linux/system.bit
 ```
+- One time I found I didn't have the correct permission to write in the folder all of a sudden... no idea why but this fixes it
+```bash
+sudo chown -R $USER:$USER /opt/Xilinx/casb/
+```
 - Test the build from the `casb.linux` directory 
 ```bash
 petalinux-boot --qemu --u-boot
