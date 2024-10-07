@@ -39,3 +39,8 @@ sudo eject /dev/sda
   - username: petalinux
   - password: petalinux
 - Running `i2cdetect -l` now also displays a xilinx connection
+
+### SanDisk Extreme 32 GB (RED/GOLD) (v2)
+- Rootfs additions
+  - Added petalinux user to list of sudo users
+    - This should allow changing `/.ssh/config` file, allow creating new users, and give access to `i2c-tools` command 
