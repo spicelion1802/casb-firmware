@@ -17,3 +17,7 @@
 ```bash
 petalinux-config -p casb.linux/ -c rootfs
 `PetaLinux RootFS Settings` --> `Add Users to Sudo users` --> enter default `petalinux` user
+```
+
+### Infinite i2c addresses connected
+- SDA and SCL pin mapping swapped in Vivado
