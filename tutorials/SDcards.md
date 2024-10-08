@@ -47,3 +47,4 @@ sudo eject /dev/sda
   - Added petalinux/petalinux to list of sudo users
     - This grants ability to change `/.ssh/config` file, create new users, and give access to `i2c-tools` command
 - Swapped SDA and SCL mapping
+- Disabled i2c bus 0 and 1
