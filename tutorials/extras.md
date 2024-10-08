@@ -1,5 +1,13 @@
 # Bonus
 
+### i2c addresses
+AD7997-0 set AS pin to Vdd ----------------- 0100010 ---- 22
+DAC6578-T set AD0 to GND and AD1 to GND ---- 1001000 ---- 48
+DAC6578-W set AD0 to Vdd and AD1 to GND ---- 1001001 ---- 49
+24AA025E48T set AD0, AD1, AD2 to Vdd ------- 1010000 ---- 50
+
+47 = 1000111
+
 ### Adrian help stuck on sd card
 - The board file specifies how to configure the zynq processor: certain features like clock, sd, eth, usb are designed to be output in a specific location in a specific way for a certain board.
 - Previously had ddr disabled, which meant no memory location to boot from?
