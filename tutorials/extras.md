@@ -1,5 +1,9 @@
 # Bonus
 
+### Address Editor
+- `Window` --> `Address Editor`
+Can see what doesn't have an address, right click then `assign` to auto-fix
+
 ### i2c addresses
 AD7997-0 set AS pin to Vdd ----------------- 0100010 ---- 22
 DAC6578-T set AD0 to GND and AD1 to GND ---- 1001000 ---- 48
