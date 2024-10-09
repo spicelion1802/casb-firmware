@@ -42,9 +42,11 @@ sudo eject /dev/sda
 
 ### SanDisk Extreme 32 GB (RED/GOLD) (v2)
 - Rootfs additions
-  - Added root login by default
+  - Added root login by default via `Image features` --> `serial-autologin-root`
   - Added root/root user
   - Added petalinux/petalinux to list of sudo users
     - This grants ability to change `/.ssh/config` file, create new users, and give access to `i2c-tools` command
 - Swapped SDA and SCL mapping
-- Disabled i2c bus 0 and 1 -- not yet
+- Disabled i2c bus 0 and 1
+- Added casbuser/casbdontfailmenow (no sudo priviledge)
+- Added user packages `gpio-demo` and `regtest`
