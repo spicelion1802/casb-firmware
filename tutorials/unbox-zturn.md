@@ -63,3 +63,7 @@ Host 128.91.41.181
     HostKeyAlgorithms +ssh-rsa
     PubkeyAcceptedAlgorithms +ssh-rsa
 ```
+- If hostkey changes and you can't connect try again after removing the hostkey
+```bash
+ssh-keygen -f "/home/hep/.ssh/known_hosts" -R "128.91.42.95"
+```
