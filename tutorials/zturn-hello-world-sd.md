@@ -37,13 +37,13 @@ sudo apt install mtools
 sudo umount /dev/sda1
 sudo fsck.vfat -a /dev/sda1
 sudo mkdir /mnt/sd_boot
-sudo mount /dev/sda1 /mnt/sd_boot
+sudo mount /dev/sda1 /media/hep/BOOT
 ```
 ```bash
 sudo umount /dev/sda2
 sudo fsck.vfat -a /dev/sda2
 sudo mkdir /mnt/sd_root
-sudo mount /dev/sda2 /mnt/sd_root
+sudo mount /dev/sda2 /media/hep/ROOT
 ```
 - Reopen gparted and check that the flag disapeared.
 
