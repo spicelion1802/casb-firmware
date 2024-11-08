@@ -35,7 +35,7 @@ petalinux-build -p casb.linux -c petalinux-image-full
 - Don't worry if you get `INFO: Failed to copy built images to tftp dir: /tftpboot`
 - I found that the build images were located `casb.linux/build/images/linux` instead of `casb.linux/images/linux`, so copy them to the correct location
 ```bash
-cp -r `casb.linux/build/images casb.linux/images
+cp -r casb.linux/build/images casb.linux/images
 ```
 - Package the image to create the output file `casb.linux/images/linux/BOOT.bin`
 ```bash
