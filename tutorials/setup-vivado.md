@@ -15,4 +15,8 @@ alias vivado_2023="source /opt/Xilinx/Vivado/2023.2/settings64.sh"
 export XILINXD_LICENSE_FILE=1700@localhost
 export LM_LICENSE_FILE=2700@localhost
 ```
-
+### Board Files
+- Need to move the board files to where Vivado can see them. I stored them in the `board-files` folder
+```
+mv /path/to/casb-firmware/board_stuff/board_files/* /opt/Xilinx/Vivado/<version>/data/boards/board_files/
+```
