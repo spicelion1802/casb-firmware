@@ -47,10 +47,10 @@ proc checkRequiredFiles { origin_dir} {
   }
 
   set paths [list \
- "[file normalize "$origin_dir/[file normalize "$origin_dir/../ip_repo/4reg_block_1_0"]"]"\
- "[file normalize "$origin_dir/[file normalize "$origin_dir/../ip_repo/4reg_block_1_0"]"]"\
- "[file normalize "$origin_dir/[file normalize "$origin_dir/../ip_repo/register_block_1_0"]"]"\
- "[file normalize "$origin_dir/[file normalize "$origin_dir/../ip_repo/reg_block_1_0"]"]"\
+ "[file normalize "$origin_dir/[file normalize "$origin_dir/ip_repo/4reg_block_1_0"]"]"\
+ "[file normalize "$origin_dir/[file normalize "$origin_dir/ip_repo/4reg_block_1_0"]"]"\
+ "[file normalize "$origin_dir/[file normalize "$origin_dir/ip_repo/register_block_1_0"]"]"\
+ "[file normalize "$origin_dir/[file normalize "$origin_dir/ip_repo/reg_block_1_0"]"]"\
   ]
   foreach ipath $paths {
     if { ![file isdirectory $ipath] } {
@@ -78,7 +78,7 @@ if { [info exists ::user_project_name] } {
 }
 
 variable script_file
-set script_file "my_project.tcl"
+set script_file "setup.tcl"
 
 # Help information for this script
 proc print_help {} {
@@ -181,7 +181,7 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 # Set IP repository paths
 set obj [get_filesets sources_1]
 if { $obj != {} } {
-   set_property "ip_repo_paths" "[file normalize "$origin_dir/../ip_repo/4reg_block_1_0"] [file normalize "$origin_dir/../ip_repo/4reg_block_1_0"] [file normalize "$origin_dir/../ip_repo/register_block_1_0"] [file normalize "$origin_dir/../ip_repo/reg_block_1_0"]" $obj
+   set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/4reg_block_1_0"] [file normalize "$origin_dir/ip_repo/4reg_block_1_0"] [file normalize "$origin_dir/ip_repo/register_block_1_0"] [file normalize "$origin_dir/ip_repo/reg_block_1_0"]" $obj
 
    # Rebuild user ip_repo's index before adding any source files
    update_ip_catalog -rebuild
