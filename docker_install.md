@@ -1,8 +1,13 @@
-OS: Windows 11 Pro
-System: Device name	DESKTOP-TQ684VH
-Processor	13th Gen Intel(R) Core(TM) i7-1370P   1.90 GHz
-Installed RAM	64.0 GB 
-System type	64-bit operating system, x64-based processor
+# How to install PetaLinux 
+
+### My Setup
+- Computer: `Device name	DESKTOP-TQ684VH`
+- OS: `Windows 11 Pro`
+- PetaLinux: `2023.2`
+- Installed RAM:	`64.0 GB`
+- Processor:	`13th Gen Intel(R) Core(TM) i7-1370P   1.90 GHz`
+- System type:	`64-bit operating system, x64-based processor`
+
 
 Tutorial : https://medium.com/@animagun/how-to-use-docker-to-create-a-linux-environment-36f246d7cad9
 Visit 
