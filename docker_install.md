@@ -1,4 +1,4 @@
-# How to install PetaLinux 
+# How to install PetaLinux on Docker for Windows
 
 ### My Setup
 - Computer: `Device name	DESKTOP-TQ684VH`
