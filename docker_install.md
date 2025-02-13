@@ -100,5 +100,20 @@ Fix: Dont use gedit. Use nano instead-
  ![image](https://github.com/user-attachments/assets/72cc7a8d-2c2b-44be-93e1-07113ff7a637)
 
  I guess it is like Vim? I'm not really sure.
+
+ After this to copy the petalinux file into the container you will need docker instsalled within the container. for that use 
+ ```
+sudo apt install -y docker.io
+```
+
+Honesty no need to install the docker in the container. Turns out you need to use the ```docker copy``` command from the local Windows Powershell. Go to the local Windows Powershell and for anything you want to copy use the following format
+```
+docker cp "C:\path\to\local\file.txt" <container_id>:/path/in/container/
+```
+
+In this case it would look like this:
+```
+PS C:\Users\HEP> docker cp "C:\Users\HEP\Downloads\petalinux-v2023.2-10121855-installer.run" romantic_elbakyan:/tools/Xilinx/PetaLinux/2023.2
+```
  
 
